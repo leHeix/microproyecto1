@@ -1,0 +1,93 @@
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center
+}
+
+.timer-background {
+    border-radius: 10px;
+    background: #929292;
+    white-space: normal;
+    height: 20px;
+}
+.timer-child {
+    display: inline-block;
+    margin: 10px 0 0 2%;
+    flex-grow: 1;
+    height: 25px;
+    width: 35%;
+}
+
+.question-body {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.option-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.option-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.option-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.option-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.option-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.option-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
