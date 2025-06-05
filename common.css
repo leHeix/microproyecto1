@@ -74,6 +74,15 @@ button:active {
   box-shadow: none;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 a {
-  all: unset
+  all: unset;
+  cursor: pointer;
+}
+
+.input-error {
+  border: 2px solid red;
 }
